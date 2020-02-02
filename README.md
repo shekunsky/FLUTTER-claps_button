@@ -31,3 +31,5 @@ For use claps_button widget in your project:
     ```dart
         ClapsButton(state: ClapsState.like)
     ```
+
+    
