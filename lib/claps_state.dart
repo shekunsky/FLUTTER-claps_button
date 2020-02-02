@@ -1,0 +1,4 @@
+enum ClapsState {
+  like,
+  unLike
+}
