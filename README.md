@@ -4,8 +4,8 @@ claps_button widget for Flutter project.
 
 ## Getting Started
 
-For use claps_button widget in your project:
-1. Add dependency in the pubspec.yaml file
+For use **claps_button** widget in your project:
+1. Add dependency in the **pubspec.yaml** file
 ```dart
     dependencies:
         flutter:
