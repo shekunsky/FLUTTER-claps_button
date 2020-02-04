@@ -39,3 +39,6 @@ For use **claps_button** widget in your project:
     ```
     
     
+    ## License
+
+    Windmill Smart Solutions 2020 ©
