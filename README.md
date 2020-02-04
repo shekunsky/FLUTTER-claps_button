@@ -1,6 +1,7 @@
 # claps_button
 
 **claps_button** widget for Flutter project.
+![](ClapsButton_Preview.gif)
 
 ## Getting Started
 
