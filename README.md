@@ -1,6 +1,6 @@
 # claps_button
 
-claps_button widget for Flutter project.
+**claps_button** widget for Flutter project.
 
 ## Getting Started
 

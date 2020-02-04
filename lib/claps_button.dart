@@ -5,6 +5,8 @@ import 'claps_state.dart';
 import 'claps_painter.dart';
 import 'claps_controler.dart';
 
+typedef OnTapClapsed = Function(ClapsState clapsState);
+
 class ClapsButton extends StatefulWidget {
   static const double widthDefault = 50; //default button width
   static const double heightDefault = 50; //default button height
@@ -17,8 +19,10 @@ class ClapsButton extends StatefulWidget {
   final ClapsState state;
   final Color likeColor;
   final Color unLikeColor;
+  final OnTapClapsed onTapClapsed;
 
   ClapsButton({
+    @required this.onTapClapsed,
     this.state = stateDefault,
     this.width = widthDefault,
     this.height = heightDefault,
@@ -73,7 +77,10 @@ class _ClapsState extends State<ClapsButton>
     super.build(context);
     return Container(
       child: GestureDetector(
-        onTap: _updateClapsState,
+        onTap: () {
+          _updateClapsState();
+          widget.onTapClapsed(_clapsController.state);
+        },
         child: Container(
           height: widget.height,
           width: widget.width,
