@@ -1,6 +1,7 @@
 # claps_button
 
 **claps_button** widget for Flutter project.
+
 ![](ClapsButton_Preview.gif)
 
 ## Getting Started
@@ -24,13 +25,17 @@ For use **claps_button** widget in your project:
 
 3. Make an instance of the widget.
 
-    For 'unlike' state:
     ```dart
-         ClapsButton(state: ClapsState.unLike)
+         ClapsButton(
+                state: ClapsState.unLike,
+                onTapClapsed: (state) {
+                  if (state == ClapsState.like) {
+                    print('like');
+                  } else {
+                    print('unlike');
+                  }
+                },
+              )
     ```
-    For 'like' state:
-    ```dart
-        ClapsButton(state: ClapsState.like)
-    ```
-
+    
     
