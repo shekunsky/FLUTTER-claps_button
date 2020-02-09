@@ -16,26 +16,27 @@ void main() {
           _currentState = state;
         });
 
+    // Build the widget.
     await tester.pumpWidget(_button);
 
-    // Tap the button while curent state is 'unLike'.
+    // Tap the button while current state is 'unLike'.
     await tester.tap(find.byType(ClapsButton));
 
     // Rebuild the widget after the state has changed.
-    //await tester.pump();
+    await tester.pump();
 
     // Expect to state changed to 'Like' and callback executed
     expect(_currentState, ClapsState.like);
     expect(_tapCounter, 1);
 
-    // Tap the button while curent state is 'like'.
-    // await tester.tap(find.byType(ClapsButton));
+    // Tap the button while current state is 'like'.
+    await tester.tap(find.byType(ClapsButton));
 
-    // // Rebuild the widget after the state has changed.
-    // await tester.pump();
+    // Rebuild the widget after the state has changed.
+    await tester.pump();
 
     // Expect to state changed to 'unLike' and callback executed
-    // expect(_currentState, ClapsState.unLike);
-    // expect(_tapCounter, 2);
+    expect(_currentState, ClapsState.unLike);
+    expect(_tapCounter, 2);
   });
 }

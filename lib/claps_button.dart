@@ -68,8 +68,8 @@ class _ClapsState extends State<ClapsButton>
 
   @override
   void dispose() {
-    super.dispose();
     _clapsController.dispose();
+    super.dispose();
   }
 
   @override

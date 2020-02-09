@@ -19,6 +19,12 @@ class ClapsController extends ChangeNotifier {
     controller.addListener(_onStateUpdate);
   }
 
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
   void _onStateUpdate() {
     notifyListeners();
   }
